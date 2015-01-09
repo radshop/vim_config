@@ -36,3 +36,12 @@ set scrolloff=5
 " set hidden 
 
 set background=dark
+
+" Shortcut to rapidly toggle `set list` with \l
+nmap <leader>l :set list!<CR>
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+" set the color of tabstop and EOL symbols
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
