@@ -41,3 +41,9 @@ if [ -d "vim-fugitive/.git" ]; then
 else
   git clone git@github.com:tpope/vim-fugitive.git
 fi
+
+if [ -d "vim-template/.git" ]; then
+  git -C vim-template pull
+else
+  git clone git://github.com/aperezdc/vim-template.git
+fi
