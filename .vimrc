@@ -1,6 +1,32 @@
-set nocompatible
-execute pathogen#infect()
-filetype plugin indent on
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+  Plugin 'VundleVim/Vundle.vim'
+
+  Plugin 'tpope/vim-fugitive'
+  Plugin 'tpope/vim-rails.git'
+  Plugin 'vimoutliner/vimoutliner.git'
+  Plugin 'aperezdc/vim-template.git'
+  Plugin 'scrooloose/nerdtree.git'
+  Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+  Plugin 'cohama/lexima.vim.git'
+
+  " ***ULTISNIPS
+  Plugin 'SirVer/ultisnips'
+  Plugin 'honza/vim-snippets'
+  let g:UltiSnipsExpandTrigger="<tab>"
+  let g:UltiSnipsJumpForwardTrigger="<c-b>"
+  let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+  let g:UltiSnipsEditSplit="vertical"
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
 syntax on
 set autoindent
 set smartindent
@@ -36,6 +62,7 @@ set scrolloff=5
 " set hidden 
 
 set background=dark
+colorscheme darkblue
 
 " Shortcut to rapidly toggle `set list` with \l
 nmap <leader>l :set list!<CR>
@@ -47,3 +74,6 @@ highlight SpecialKey guifg=#4a4a59
 
 " swp file location
 set directory=$HOME/.temp//
+
+" map NerdTree to ctrl-n
+map <C-n> :NERDTreeToggle<CR>

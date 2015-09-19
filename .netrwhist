@@ -1,3 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/mweber/.vim/bundle/vimoutliner/vimoutliner/scripts'
+let g:netrw_dirhist_2='/home/mweber/github/objectiveq/app/views/template_subcategories'
+let g:netrw_dirhist_3='/home/mweber/github/objectiveq/app/views/template_process_steps'
+let g:netrw_dirhist_4='/home/mweber/github/objectiveq/app/views/template_subcategories'
+let g:netrw_dirhist_5='/home/mweber/github/objectiveq/app/views/process_steps'
+let g:netrw_dirhist_6='/home/mweber/github/objectiveq/app/views/subcategories'
+let g:netrw_dirhist_7='/home/mweber/github/objectiveq/app/views/template_subcategories'
+let g:netrw_dirhist_8='/home/mweber/.vim'
