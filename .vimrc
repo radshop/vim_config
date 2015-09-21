@@ -77,3 +77,9 @@ set directory=$HOME/.temp//
 
 " map NerdTree to ctrl-n
 map <C-n> :NERDTreeToggle<CR>
+
+"gvim default font
+if has('gui_running')
+  set guifont=Monospace\ 12
+endif
+
