@@ -5,4 +5,6 @@
  
  ~/.vim/clones.sh
  
+ mkdir ~/.temp
+ 
  vim +PluginInstall +qall
