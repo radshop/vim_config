@@ -3,7 +3,7 @@
  
  ln -s .vim/.vimrc ~/.vimrc
  
- ~/.vim/clones.sh
+ ~/.vim/bundle/clones.sh
  
  mkdir ~/.temp
  
