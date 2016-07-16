@@ -83,3 +83,7 @@ if has('gui_running')
   set guifont=Monospace\ 12
 endif
 
+" GNU Octave settings
+autocmd FileType matlab setlocal keywordprg=info\ octave\ --vi-keys\ --index-search
+" F5 executes the octave script you are editing
+autocmd FileType matlab  map <buffer> <f5> ggOpkg load all<esc>Gopause<esc>:w<cr>:!octave -qf %<cr>ddggdd:w<cr>
