@@ -3,6 +3,8 @@
  
  ln -s .vim/.vimrc ~/.vimrc
  
+ ln -s .vim/.octaverc ~/.octaverc
+ 
  ~/.vim/bundle/clones.sh
  
  mkdir ~/.temp
