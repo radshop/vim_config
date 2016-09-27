@@ -1,5 +1,5 @@
  
- git clone git@github.com:radshop/vim.git ~/.vim
+ git clone git@github.com:radshop/vim_config.git ~/.vim
  
  ln -s .vim/.vimrc ~/.vimrc
  
