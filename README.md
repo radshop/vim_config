@@ -10,3 +10,8 @@
  mkdir ~/.temp
  
  vim +PluginInstall +qall
+ 
+
+ TO CHANGE PLUGINS, EDIT THE VIMRC THEN RUN
+ vim +PluginUpdate +PluginClean +qall
+

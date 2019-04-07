@@ -7,7 +7,6 @@ call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'
 
   Plugin 'tpope/vim-fugitive'
-  Plugin 'tpope/vim-rails.git'
   Plugin 'vimoutliner/vimoutliner.git'
   Plugin 'aperezdc/vim-template.git'
   Plugin 'scrooloose/nerdtree.git'
@@ -37,12 +36,15 @@ set shiftwidth=2
 set expandtab 
 
 " line numbers, prompt, status bar
-set number
+set number relativenumber
 set ruler
 set more
 set showcmd       " Show (partial) command in status line.
 set laststatus=2
 set title
+
+" clear search highlighting with \\
+nnoremap \\ :noh<return>
 
 " fully enbled backspace
 set backspace=indent,eol,start
@@ -51,7 +53,6 @@ set backspace=indent,eol,start
 
 " show information in the status line
 set showcmd ruler
-
 
 set scrolloff=5
 
