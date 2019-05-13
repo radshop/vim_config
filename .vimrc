@@ -12,7 +12,6 @@ call vundle#begin()
   Plugin 'scrooloose/nerdtree.git'
   Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
   Plugin 'cohama/lexima.vim.git'
-  Plugin 'joereynolds/SQHell.vim'
 
   " ***ULTISNIPS
   Plugin 'SirVer/ultisnips'
