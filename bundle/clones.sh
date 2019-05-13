@@ -1,3 +1,5 @@
+#! /bin/sh
+
 cd ~/.vim/bundle
 
 if [ -d "vundle/.git" ]; then
@@ -5,3 +7,4 @@ if [ -d "vundle/.git" ]; then
 else
   git clone git@github.com:VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
+
