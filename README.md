@@ -1,20 +1,20 @@
  
- git clone git@github.com:radshop/vim_config.git ~/.vim
+ `git clone git@github.com:radshop/vim_config.git ~/.vim`
  
- ln -s .vim/.vimrc ~/.vimrc
+`ln -s .vim/.vimrc ~/.vimrc`
  
- ~/.vim/bundle/clones.sh
+ `~/.vim/bundle/clones.sh`
  
- mkdir ~/.temp
+ `mkdir ~/.temp`
  
- vim +PluginInstall +qall
+ `vim +PluginInstall +qall`
  
 ON UBUNTU MAY BE NECESSARY:
 
-sudo chown <user>:<user> .viminfo
+`sudo chown <user>:<user> .viminfo`
 
 
 TO CHANGE PLUGINS, EDIT THE VIMRC THEN RUN:
 
- vim +PluginUpdate +PluginClean +qall
+`vim +PluginUpdate +PluginClean +qall`
 
