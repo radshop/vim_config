@@ -12,6 +12,7 @@ call vundle#begin()
   Plugin 'scrooloose/nerdtree.git'
   Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
   Plugin 'cohama/lexima.vim.git'
+  Plugin 'vim-scripts/dbext.vim'
 
   " ***ULTISNIPS
   Plugin 'SirVer/ultisnips'
@@ -24,7 +25,6 @@ call vundle#begin()
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
 
 syntax on
 set autoindent
@@ -65,14 +65,6 @@ set scrolloff=5
 set background=dark
 colorscheme delek
 
-" Shortcut to rapidly toggle `set list` with \l
-nmap <leader>l :set list!<CR>
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
-" set the color of tabstop and EOL symbols
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
-
 " swp file location
 set directory=$HOME/.temp//
 
@@ -84,7 +76,10 @@ if has('gui_running')
   set guifont=Monospace\ 12
 endif
 
-" GNU Octave settings
-autocmd FileType matlab setlocal keywordprg=info\ octave\ --vi-keys\ --index-search
-" F5 executes the octave script you are editing
-autocmd FileType matlab  map <buffer> <f5> ggOpkg load all<esc>Gopause<esc>:w<cr>:!octave -qf %<cr>ddggdd:w<cr>
+"allow 3 seconds for timeout on leader key 
+set timeoutlen = 3000
+
+" .vimrc_private is gitignored, so sensitive info goes there
+if filereadable(expand('~/.vim/.vimrc_private'))
+  source ~/.vim/.vimrc_private
+endif
