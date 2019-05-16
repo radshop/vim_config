@@ -77,7 +77,7 @@ if has('gui_running')
 endif
 
 "allow 3 seconds for timeout on leader key 
-set timeoutlen = 3000
+set timeoutlen=3000
 
 " .vimrc_private is gitignored, so sensitive info goes there
 if filereadable(expand('~/.vim/.vimrc_private'))
