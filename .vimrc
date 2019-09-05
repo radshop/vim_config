@@ -83,3 +83,6 @@ set timeoutlen=3000
 if filereadable(expand('~/.vim/.vimrc_private'))
   source ~/.vim/.vimrc_private
 endif
+
+" ctrl+shift+p to execute script with python3
+map <C-S-p> :!python3<Space>%
