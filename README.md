@@ -3,7 +3,7 @@
  
 `ln -s .vim/.vimrc ~/.vimrc`
  
- `~/.vim/bundle/clones.sh`
+ `~/.vim/clones.sh`
  
  `mkdir ~/.temp`
  
@@ -18,3 +18,10 @@ TO CHANGE PLUGINS, EDIT THE VIMRC THEN RUN:
 
 `vim +PluginUpdate +PluginClean +qall`
 
+FOR TMUX
+
+`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+
+`ln -s .vim/.tmux.conf ~/.tmux.conf`
+
+`tmux source ~/.tmux.conf`
