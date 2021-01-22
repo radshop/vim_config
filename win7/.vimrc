@@ -2,8 +2,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=$HOME/.vim/bundle/Vundle.vim
+call vundle#begin('$HOME/.vim/bundle/')
   Plugin 'VundleVim/Vundle.vim'
 
   Plugin 'tpope/vim-fugitive'
@@ -13,14 +13,6 @@ call vundle#begin()
   Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
   Plugin 'cohama/lexima.vim.git'
   Plugin 'vim-scripts/dbext.vim'
-
-  " ***ULTISNIPS
-  Plugin 'SirVer/ultisnips'
-  Plugin 'honza/vim-snippets'
-  let g:UltiSnipsExpandTrigger="<tab>"
-  let g:UltiSnipsJumpForwardTrigger="<c-b>"
-  let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-  let g:UltiSnipsEditSplit="vertical"
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
