@@ -7,18 +7,20 @@ call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'
 
   Plugin 'tpope/vim-fugitive'
-  Plugin 'vimoutliner/vimoutliner.git'
 "  Plugin 'aperezdc/vim-template.git'
   Plugin 'scrooloose/nerdtree.git'
 "  Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 "  Plugin 'cohama/lexima.vim.git'
   Plugin 'vim-scripts/dbext.vim'
-  Plugin 'sheerun/vim-polyglot'
   Plugin 'jiangmiao/auto-pairs'
   Plugin 'Yggdroot/indentLine'
 "  Plugin 'dense-analysis/ale'
 "  Plugin 'tomlion/vim-solidity'
-"  Plugin 'pangloss/vim-javascript'
+"  Plugin 'sheerun/vim-polyglot'
+  Plugin 'vimoutliner/vimoutliner.git'
+  Plugin 'pangloss/vim-javascript'
+  Plugin 'mxw/vim-jsx'
+  Plugin 'mattn/emmet-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -28,6 +30,15 @@ filetype plugin indent on    " required
 " After modifying the plugin list, run :PluginInstall!
 " To remove old bundles, run :PluginClean!
 "
+
+" mattn/emmet-vim configuration
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
+
 syntax on
 set autoindent
 set smartindent
@@ -105,6 +116,7 @@ if has('gui_running')
 endif
 
 "allow 3 seconds for timeout on leader key 
+let mapleader = "\\"
 set timeoutlen=3000
 
 " .vimrc_private is gitignored, so sensitive info goes there
