@@ -8,24 +8,26 @@ call vundle#begin()
 
   Plugin 'tpope/vim-fugitive'
   Plugin 'vimoutliner/vimoutliner.git'
-  Plugin 'aperezdc/vim-template.git'
+"  Plugin 'aperezdc/vim-template.git'
   Plugin 'scrooloose/nerdtree.git'
-  Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-  Plugin 'cohama/lexima.vim.git'
+"  Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"  Plugin 'cohama/lexima.vim.git'
   Plugin 'vim-scripts/dbext.vim'
-
-  " ***ULTISNIPS
-  Plugin 'SirVer/ultisnips'
-  Plugin 'honza/vim-snippets'
-  let g:UltiSnipsExpandTrigger="<tab>"
-  let g:UltiSnipsJumpForwardTrigger="<c-b>"
-  let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-  let g:UltiSnipsEditSplit="vertical"
+  Plugin 'sheerun/vim-polyglot'
+  Plugin 'jiangmiao/auto-pairs'
+  Plugin 'Yggdroot/indentLine'
+"  Plugin 'dense-analysis/ale'
+"  Plugin 'tomlion/vim-solidity'
+"  Plugin 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" reload after changes with :source ~/.vimrc
+" After modifying the plugin list, run :PluginInstall!
+" To remove old bundles, run :PluginClean!
+"
 syntax on
 set autoindent
 set smartindent
@@ -42,6 +44,28 @@ set more
 set showcmd       " Show (partial) command in status line.
 set laststatus=2
 set title
+
+" status line
+set statusline=
+set statusline+=%F                            " current file path
+set statusline+=\                             " blank space
+set statusline+=%y                            " filetype
+set statusline+=\                             " blank space
+set statusline+=%m                            " modified flag [+]
+set statusline+=\                             " blank space
+set statusline+=%=                            " right-align from now on
+set statusline+=%{PasteForStatusline()}       " paste flag
+set statusline+=\[%{mode()}\]                 " current mode
+set statusline+=\                             " blank space
+set statusline+=%v                            " column number
+set statusline+=\:                            " colon separator
+set statusline+=%l                            " row number
+set statusline+=\/                            " slash separator
+set statusline+=%L                            " number of rows
+set statusline+=\                             " blank space
+set statusline+=%{winnr()}                    " buffer number
+set statusline+=\                             " blank space
+set statusline+=%{FugitiveStatusline()}
 
 " clear search highlighting with \\
 nnoremap \\ :noh<return>
@@ -63,13 +87,17 @@ set scrolloff=5
 " set hidden 
 
 set background=dark
-colorscheme delek
+colorscheme elflord
 
 " swp file location
 set directory=$HOME/.temp//
 
 " map NerdTree to ctrl-n
 map <C-n> :NERDTreeToggle<CR>
+" map NerdTreeFocus to ctrl-m
+map <C-m> :NERDTreeFocus<CR>
+" make nerdtree directories easier to read
+highlight Directory ctermfg=LightBlue
 
 "gvim default font
 if has('gui_running')
@@ -86,3 +114,13 @@ endif
 
 " ctrl+shift+p to execute script with python3
 map <C-S-p> :!python3<Space>%
+
+function! PasteForStatusline()
+    let paste_status = &paste
+    if paste_status == 1
+        return " [paste] "
+    else
+        return ""
+    endif
+endfunction
+
