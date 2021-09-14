@@ -6,19 +6,21 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'
 
+" my favorites
   Plugin 'tpope/vim-fugitive'
-"  Plugin 'aperezdc/vim-template.git'
   Plugin 'scrooloose/nerdtree.git'
-"  Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-"  Plugin 'cohama/lexima.vim.git'
   Plugin 'vim-scripts/dbext.vim'
-  Plugin 'jiangmiao/auto-pairs'
-  Plugin 'Yggdroot/indentLine'
-"  Plugin 'dense-analysis/ale'
-"  Plugin 'tomlion/vim-solidity'
-"  Plugin 'sheerun/vim-polyglot'
   Plugin 'vimoutliner/vimoutliner.git'
+  Plugin 'Yggdroot/indentLine'
+
+" IDE
   Plugin 'pangloss/vim-javascript'
+  Plugin 'MarcWeber/vim-addon-mw-utils'
+  Plugin 'tomtom/tlib_vim'
+  Plugin 'garbas/vim-snipmate'
+  Plugin 'grvcoelho/vim-javascript-snippets'
+
+  Plugin 'jiangmiao/auto-pairs'
   Plugin 'mxw/vim-jsx'
   Plugin 'mattn/emmet-vim'
 
@@ -29,15 +31,11 @@ filetype plugin indent on    " required
 " reload after changes with :source ~/.vimrc
 " After modifying the plugin list, run :PluginInstall!
 " To remove old bundles, run :PluginClean!
-"
 
-" mattn/emmet-vim configuration
-let g:user_emmet_leader_key='<Tab>'
-let g:user_emmet_settings = {
-  \  'javascript.jsx' : {
-    \      'extends' : 'jsx',
-    \  },
-  \}
+" snimpmate Ctrl-j mapping
+let g:snipMate = { 'snippet_version' : 1  }
+imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
 
 syntax on
 set autoindent
