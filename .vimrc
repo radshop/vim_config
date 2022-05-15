@@ -12,24 +12,13 @@ call vundle#begin()
   Plugin 'vim-scripts/dbext.vim'
   Plugin 'vimoutliner/vimoutliner.git'
   Plugin 'Yggdroot/indentLine'
-
-
-
-" IDE
-  Plugin 'mattn/emmet-vim'
-  Plugin 'yuezk/vim-js'
-  Plugin 'maxmellon/vim-jsx-pretty'
   Plugin 'tpope/vim-commentary'
-  Plugin 'dense-analysis/ale'
+  Plugin 'aperezdc/vim-template'
+  Plugin 'jiangmiao/auto-pairs'
 
-"  Plugin 'pangloss/vim-javascript'
 "  Plugin 'MarcWeber/vim-addon-mw-utils'
 "  Plugin 'tomtom/tlib_vim'
 "  Plugin 'garbas/vim-snipmate'
-"  Plugin 'grvcoelho/vim-javascript-snippets'
-"
-"  Plugin 'jiangmiao/auto-pairs'
-"  Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
