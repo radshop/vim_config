@@ -14,7 +14,7 @@ call vundle#begin()
   Plugin 'Yggdroot/indentLine'
   Plugin 'tpope/vim-commentary'
   Plugin 'aperezdc/vim-template'
-  Plugin 'jiangmiao/auto-pairs'
+  Plugin 'tpope/vim-surround'
 
 "  Plugin 'MarcWeber/vim-addon-mw-utils'
 "  Plugin 'tomtom/tlib_vim'
@@ -29,9 +29,9 @@ filetype plugin indent on    " required
 " To remove old bundles, run :PluginClean!
 
 " snimpmate Ctrl-j mapping
-let g:snipMate = { 'snippet_version' : 1  }
-imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
+" let g:snipMate = { 'snippet_version' : 1  }
+" imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
+" smap <C-J> <Plug>snipMateNextOrTrigger
 
 syntax on
 set autoindent
